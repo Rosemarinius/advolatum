@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Usually-font";
+    src: url('Usually-font-Bold.eot');
+	src: local('Usually-font'),
+		url('Usually-font-Bold.woff') format('woff'),
+		url('Usually-font-Bold.ttf') format('truetype');
+}
+

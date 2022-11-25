@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Uindbase Font 1";
+    src: url('UF1.eot');
+	src: local('Uindbase Font 1'),
+		url('UF1.woff') format('woff'),
+		url('UF1.ttf') format('truetype');
+}
