@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SLIDER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Rosario:300,500" rel="stylesheet" />
     <link rel="stylesheet" href="css/fonts/Usually-font/Usually-font.css">
@@ -68,7 +69,7 @@
             </div>
 
             <div class="intro-button-wrapper centered">
-                <button class="intro__button intro-button">
+                <button class="intro__button intro-button button">
                     <img src="img/svg/wing.svg" alt="wing">
                     <a class="intro-button__text link-reset">Каталог</a>
                 </button>
@@ -85,24 +86,24 @@
                 <div class="ts-slider-wrapper swiper-wrapper">
                 
                 <div id="slide-1" class="ts-slider__slide swiper-slide">
-                    Текст описания конкретной коллекции с возможным дополнением уникальности
-                    <button class="intro__button intro-button">
-                        <img src="img/svg/wing.svg" alt="wing">
-                        <a class="intro-button__text link-reset">Каталог</a>
-                    </button>
+                    <div class="ts-slider__slide-text-wrapper">
+                        <h3>Текст описания конкретной коллекции 
+                            с возможным дополнением уникальности</h3>
+                        <button class="slide__button button centered">
+                            <img src="img/svg/wing.svg" alt="wing">
+                            <a class="intro-button__text link-reset">Каталог</a>
+                        </button>
+                    </div>
                 </div>
-                <div id="slide-2" class="ts-slider__slide swiper-slide">Slide 2</div>
-                <div id="slide-3" class="ts-slider__slide swiper-slide">Slide 3</div>
-                <div id="slide-4" class="ts-slider__slide swiper-slide">Slide 3</div>
-                <div id="slide-5" class="ts-slider__slide swiper-slide">Slide 3</div>
+                <div id="slide-2" class="ts-slider__slide swiper-slide"></div>
+                <div id="slide-3" class="ts-slider__slide swiper-slide"></div>
+                <div id="slide-4" class="ts-slider__slide swiper-slide"></div>
+                <div id="slide-5" class="ts-slider__slide swiper-slide"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-            
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-                <div class="swiper-scrollbar"></div>
+                
+                <div class="ts-slider-pagination"></div>
             </div>
+            
         </section>
 
     </main>
@@ -112,7 +113,6 @@
     </footer>
 
     <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
 </body>

@@ -1,21 +1,13 @@
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
+new Swiper('.ts-slider', {
     loop: true,
-  
-    // If we need pagination
+
     pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      el: '.ts-slider-pagination',
+      bulletClass: 'ts-slider-pag-bullet',
+      bulletActiveClass: 'ts-slider-pag-bullet--active',
+      renderBullet: function(index, className) {
+        return '<div class="' + className + '"></div>';
+      },
+      clickable: true,
     },
   });
