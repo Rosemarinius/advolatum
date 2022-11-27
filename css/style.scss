@@ -22,6 +22,7 @@ $white: #FFFFFF;
 
 
 // MULTI-STYLES
+
 .none {
     display: none;
 }
@@ -118,8 +119,6 @@ main {
             text-align: center;
             text-transform: uppercase;
 
-            z-index: 1;
-
             color:#1F252D;
         }
 
@@ -135,8 +134,6 @@ main {
             text-transform: uppercase;
             text-shadow: 5px 0px purple,
                         -5px 0px 5px $yellow;
-
-            z-index: 2;
 
             color: #FFFFFF;
         }
@@ -195,7 +192,53 @@ main {
         }
     }
 
-    
+    .this-season {
+        max-width: $limit-size1920;
+        
+        padding-top: 280px;
+        &-title-wrapper {
+            height: 160px;
+            position: relative;
+        }
+        &__title-bg {
+            position: absolute;
+
+            font-family: 'Usually-font';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 140px;
+            line-height: 160px;
+            text-transform: uppercase;
+
+            color: #1F252D;
+        }
+        &__title {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Uindbase Font 1';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 100px;
+            line-height: 100px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+        }
+        .ts-slider {
+            width: 1248px;
+            &__slide {
+                height: 600px;
+            }
+            #slide-1 {
+                background-image: url("../img/main-slider-slide.jpg");
+            }
+            
+        }
+    }
 }
 
 @media (max-width: 1600px) {

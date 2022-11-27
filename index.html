@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SLIDER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Rosario:300,500" rel="stylesheet" />
     <link rel="stylesheet" href="css/fonts/Usually-font/Usually-font.css">
@@ -11,6 +13,7 @@
     <link rel="stylesheet" href="css/iconic-font.css">
     <!-- STYLE -->
     <link rel="stylesheet" href="css/style.css">
+    
 
     <title>advolatum</title>
 </head>
@@ -72,12 +75,45 @@
             </div>
         </section>
 
-        
+        <section class="this-season centered">
+            <div class="this-season-title-wrapper">
+                <h2 class="this-season__title-bg">на этот сезон</h2>
+                <h3 class="this-season__title">на этот сезон</h3>
+            </div>
+
+            <div class="this-season__slider ts-slider swiper">
+                <div class="ts-slider-wrapper swiper-wrapper">
+                
+                <div id="slide-1" class="ts-slider__slide swiper-slide">
+                    Текст описания конкретной коллекции с возможным дополнением уникальности
+                    <button class="intro__button intro-button">
+                        <img src="img/svg/wing.svg" alt="wing">
+                        <a class="intro-button__text link-reset">Каталог</a>
+                    </button>
+                </div>
+                <div id="slide-2" class="ts-slider__slide swiper-slide">Slide 2</div>
+                <div id="slide-3" class="ts-slider__slide swiper-slide">Slide 3</div>
+                <div id="slide-4" class="ts-slider__slide swiper-slide">Slide 3</div>
+                <div id="slide-5" class="ts-slider__slide swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
 
     </main>
 
     <footer>
 
     </footer>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
