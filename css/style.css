@@ -99,6 +99,7 @@ input, button, textarea, select {
 
 .title-bg {
   position: absolute;
+  width: 100%;
   font-family: "Usually-font";
   font-style: normal;
   font-weight: 700;
@@ -114,6 +115,7 @@ input, button, textarea, select {
   font-weight: 400;
   top: 50%;
   text-transform: uppercase;
+  text-shadow: 9px 9px 4px rgba(0, 0, 0, 0.25);
   color: #FFFFFF;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -186,6 +188,7 @@ main .intro-title-wrapper {
   height: 300px;
   padding-top: 40px;
   position: relative;
+  overflow: hidden;
 }
 main .intro__bg-title {
   position: absolute;
@@ -248,6 +251,7 @@ main .this-season {
 }
 main .this-season__title-bg {
   position: absolute;
+  text-align: left;
   font-size: 140px;
   line-height: 160px;
 }
@@ -339,6 +343,7 @@ main .actual {
 main .actual__title-bg {
   font-size: 160px;
   line-height: 160px;
+  text-align: right;
 }
 main .actual__title {
   font-size: 100px;
@@ -358,13 +363,67 @@ main .actual__slider .actual-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 270px;
+  perspective: none;
+  width: 270px;
+  height: 470px;
+}
+main .actual__slider .actual-card-flip {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+main .actual__slider .actual-card-front, main .actual__slider .actual-card-back {
+  width: 270px;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   background-color: #10171F;
+}
+main .actual__slider .actual-card-front {
+  transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  z-index: 2;
+}
+main .actual__slider .actual-card-back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+main .actual__slider .actual-card__bg {
+  width: 270px;
+  height: 380px;
+  padding: 30px 15px 0 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: url("../img/card-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .actual__slider .actual-card__back-text {
+  padding-top: 30px;
+}
+main .actual__slider .actual-card-back-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  text-decoration: underline;
 }
 main .actual__slider .actual-card__photo img {
   width: 270px;
@@ -385,11 +444,51 @@ main .actual__slider .actual-card-buy-wrapper {
 main .actual__slider .actual-card__buy {
   text-decoration: underline;
 }
-main .actual__more {
-  max-width: 1248px;
+main .actual-more-wrapper {
+  text-align: center;
   padding: 60px 0px;
+  width: 100%;
+}
+main .actual__more {
+  display: inline-block;
+  max-width: 1248px;
   text-align: center;
   text-decoration: underline;
+}
+main .contact {
+  max-width: 1568px;
+}
+main .contact__title-bg {
+  font-size: 180px;
+  line-height: 180px;
+}
+main .contact__title {
+  font-size: 100px;
+}
+main .contact-content-wrapper {
+  padding: 20px 0px;
+  display: flex;
+}
+main .contact__map img {
+  max-width: 1000px;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .contact__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-family: "Uindbase Font 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  flex-grow: 1;
 }
 
 .footer {
@@ -480,6 +579,28 @@ main .actual__more {
   main .actual__title-ws {
     display: block;
   }
+  main .contact {
+    max-width: 1254px;
+  }
+  main .contact__title-bg {
+    font-size: 130px;
+    line-height: 130px;
+  }
+  main .contact__title {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  main .contact-content-wrapper {
+    padding: 20px 0px;
+  }
+  main .contact__map img {
+    max-width: 835px;
+    height: 425px;
+  }
+  main .contact__links {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 @media (max-width: 1024px) {
   .header {
@@ -541,15 +662,14 @@ main .actual__more {
     padding-top: 90px;
   }
   main .this-season-title-wrapper {
-    padding: 0 70px;
     height: 280px;
   }
   main .this-season__title-bg {
-    font-size: 90px;
+    font-size: 100px;
   }
   main .this-season__title {
     font-size: 80px;
-    width: 90%;
+    padding-left: 0px;
   }
   main .this-season .ts-slider {
     max-width: 100%;
@@ -599,6 +719,30 @@ main .actual__more {
     -o-transform: translatex(50%);
   }
   main .actual__title-ws {
+    display: none;
+  }
+  main .contact__title-bg {
+    font-size: 70px;
+    line-height: 160px;
+  }
+  main .contact__title {
+    font-size: 70px;
+    line-height: 70px;
+    padding-left: 20px;
+  }
+  main .contact-content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  main .contact__map img {
+    max-width: 100%;
+    width: 100%;
+  }
+  main .contact__links {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  main .contact__social {
     display: none;
   }
   .footer {
@@ -662,11 +806,11 @@ main .actual__more {
     position: relative;
   }
   main .intro__bg-title {
-    font-size: 60px;
+    font-size: 50px;
     line-height: 52.26px;
   }
   main .intro__title {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 40px;
     top: 50%;
     transform: translateY(-50%);
@@ -689,15 +833,16 @@ main .actual__more {
     padding-top: 215px;
   }
   main .this-season-title-wrapper {
-    padding: 0 15px;
     height: 160px;
   }
   main .this-season__title-bg {
+    padding-left: 15px;
     font-size: 60px;
     line-height: 60px;
   }
   main .this-season__title {
     top: 0;
+    padding-left: 15px;
     line-height: 60px;
     transform: translateY(0);
     font-size: 60px;
@@ -727,8 +872,8 @@ main .actual__more {
   }
   main .actual {
     padding-top: 0px;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 13px;
+    line-height: 13px;
   }
   main .actual-title-wrapper {
     height: 160px;
@@ -764,8 +909,27 @@ main .actual__more {
     width: 180px;
     height: 330px;
   }
+  main .actual__slider .actual-card-front, main .actual__slider .actual-card-back {
+    width: 180px;
+  }
+  main .actual__slider .actual-card__bg {
+    width: 180px;
+    height: 250px;
+    padding: 20px 5px 0px 5px;
+  }
   main .actual__slider .actual-card__photo img {
     height: 250px;
     width: 180px;
+  }
+  main .contact__title-bg {
+    display: none;
+  }
+  main .contact__title {
+    font-size: 50px;
+    line-height: 50px;
+    padding-left: 5px;
+  }
+  main .contact-content-wrapper {
+    padding: 20px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
