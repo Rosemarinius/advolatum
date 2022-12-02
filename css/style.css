@@ -225,17 +225,17 @@ input, button, textarea, select {
   display: inline-block;
 }
 
-main .intro {
+.intro {
   max-width: 1920px;
   padding-top: 135px;
 }
-main .intro-title-wrapper {
+.intro-title-wrapper {
   height: 300px;
   padding-top: 40px;
   position: relative;
   overflow: hidden;
 }
-main .intro__bg-title {
+.intro__bg-title {
   position: absolute;
   font-family: "Usually-font";
   font-style: normal;
@@ -246,7 +246,7 @@ main .intro__bg-title {
   text-transform: uppercase;
   color: #1F252D;
 }
-main .intro__title {
+.intro__title {
   position: absolute;
   font-family: "Usually-font";
   font-style: normal;
@@ -258,7 +258,7 @@ main .intro__title {
   text-shadow: 5px 0px purple, -5px 0px 5px #D1C12B;
   color: #FFFFFF;
 }
-main .intro__subtitle {
+.intro__subtitle {
   font-family: "Uindbase Font 1";
   font-style: normal;
   font-weight: 400;
@@ -269,20 +269,20 @@ main .intro__subtitle {
   color: #FFFFFF;
   text-shadow: 10px 24px 10px rgba(0, 0, 0, 0.27);
 }
-main .intro-social {
+.intro-social {
   display: none;
 }
-main .intro-button-wrapper {
+.intro-button-wrapper {
   display: flex;
   justify-content: end;
   max-width: 1568px;
   padding: 0 20px;
 }
-main .intro-button {
+.intro-button {
   align-self: start;
   margin-top: 175px;
 }
-main .intro-button__text {
+.intro-button__text {
   font-family: "Uindbase Font 1";
   font-size: 20px;
   line-height: 24px;
@@ -290,38 +290,39 @@ main .intro-button__text {
   text-transform: uppercase;
   color: #D1C12B;
 }
-main .this-season {
+
+.this-season {
   max-width: 1568px;
   padding-top: 280px;
 }
-main .this-season__title-bg {
+.this-season__title-bg {
   position: absolute;
   text-align: left;
   font-size: 140px;
   line-height: 160px;
 }
-main .this-season__title {
+.this-season__title {
   font-size: 100px;
   line-height: 100px;
 }
-main .this-season .ts-slider {
+.this-season .ts-slider {
   max-width: 1248px;
 }
-main .this-season .ts-slider__slide {
+.this-season .ts-slider__slide {
   height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-main .this-season .ts-slider__slide-text-wrapper {
+.this-season .ts-slider__slide-text-wrapper {
   width: 300px;
   padding-top: 100px;
   margin-right: 100px;
 }
-main .this-season .ts-slider .slide__button {
+.this-season .ts-slider .slide__button {
   margin-top: 15px;
 }
-main .this-season .ts-slider #slide-1 {
+.this-season .ts-slider #slide-1 {
   background-image: url("../img/main-slider-slide.jpg");
   display: flex;
   justify-content: end;
@@ -336,25 +337,25 @@ main .this-season .ts-slider #slide-1 {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-main .this-season .ts-slider #slide-2 {
+.this-season .ts-slider #slide-2 {
   background-image: url("../img/main-slider-slide.jpg");
 }
-main .this-season .ts-slider #slide-3 {
+.this-season .ts-slider #slide-3 {
   background-image: url("../img/main-slider-slide.jpg");
 }
-main .this-season .ts-slider #slide-4 {
+.this-season .ts-slider #slide-4 {
   background-image: url("../img/main-slider-slide.jpg");
 }
-main .this-season .ts-slider #slide-5 {
+.this-season .ts-slider #slide-5 {
   background-image: url("../img/main-slider-slide.jpg");
 }
-main .this-season .ts-slider-pagination {
+.this-season .ts-slider-pagination {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding-top: 15px;
 }
-main .this-season .ts-slider-pag-bullet {
+.this-season .ts-slider-pag-bullet {
   width: 160px;
   height: 2px;
   background-color: #FFFFFF;
@@ -364,7 +365,7 @@ main .this-season .ts-slider-pag-bullet {
   -ms-border-radius: 1px;
   -o-border-radius: 1px;
 }
-main .this-season .ts-slider-pag-bullet--active {
+.this-season .ts-slider-pag-bullet--active {
   width: 160px;
   height: 2px;
   background-color: #D1C12B;
@@ -374,7 +375,8 @@ main .this-season .ts-slider-pag-bullet--active {
   -ms-border-radius: 1px;
   -o-border-radius: 1px;
 }
-main .actual {
+
+.actual {
   max-width: 1568px;
   padding-top: 50px;
   font-family: "Uindbase Font 1";
@@ -385,26 +387,26 @@ main .actual {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-main .actual__title-bg {
+.actual__title-bg {
   font-size: 160px;
   line-height: 160px;
   text-align: right;
 }
-main .actual__title {
+.actual__title {
   font-size: 100px;
   line-height: 100px;
   right: 0;
 }
-main .actual__title-ws {
+.actual__title-ws {
   display: none;
 }
-main .actual__title-ws-1 {
+.actual__title-ws-1 {
   display: none;
 }
-main .actual__slider {
+.actual__slider {
   max-width: 1248px;
 }
-main .actual__slider .actual-card {
+.actual__slider .actual-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -412,7 +414,7 @@ main .actual__slider .actual-card {
   width: 270px;
   height: 470px;
 }
-main .actual__slider .actual-card-flip {
+.actual__slider .actual-card-flip {
   position: relative;
   transform-style: preserve-3d;
   transition: 0.6s;
@@ -421,7 +423,7 @@ main .actual__slider .actual-card-flip {
   -ms-transition: 0.6s;
   -o-transition: 0.6s;
 }
-main .actual__slider .actual-card-front, main .actual__slider .actual-card-back {
+.actual__slider .actual-card-front, .actual__slider .actual-card-back {
   width: 270px;
   position: absolute;
   top: 0;
@@ -435,7 +437,7 @@ main .actual__slider .actual-card-front, main .actual__slider .actual-card-back 
   -webkit-backface-visibility: hidden;
   background-color: #10171F;
 }
-main .actual__slider .actual-card-front {
+.actual__slider .actual-card-front {
   transform: rotateY(0);
   -webkit-transform: rotateY(0);
   -moz-transform: rotateY(0);
@@ -443,14 +445,14 @@ main .actual__slider .actual-card-front {
   -o-transform: rotateY(0);
   z-index: 2;
 }
-main .actual__slider .actual-card-back {
+.actual__slider .actual-card-back {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 }
-main .actual__slider .actual-card__bg {
+.actual__slider .actual-card__bg {
   width: 270px;
   height: 380px;
   padding: 30px 15px 0 15px;
@@ -460,17 +462,17 @@ main .actual__slider .actual-card__bg {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main .actual__slider .actual-card__back-text {
+.actual__slider .actual-card__back-text {
   padding-top: 30px;
 }
-main .actual__slider .actual-card-back-wrapper {
+.actual__slider .actual-card-back-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 90px;
   text-decoration: underline;
 }
-main .actual__slider .actual-card__photo img {
+.actual__slider .actual-card__photo img {
   width: 270px;
   height: 380px;
   -o-object-fit: cover;
@@ -478,49 +480,50 @@ main .actual__slider .actual-card__photo img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-main .actual__slider .actual-card__name {
+.actual__slider .actual-card__name {
   padding: 5.5px 5px 0px 5px;
 }
-main .actual__slider .actual-card-buy-wrapper {
+.actual__slider .actual-card-buy-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px 10px 10px;
 }
-main .actual__slider .actual-card__buy {
+.actual__slider .actual-card__buy {
   text-decoration: underline;
 }
-main .actual-more-wrapper {
+.actual-more-wrapper {
   text-align: center;
   padding: 60px 0px;
   width: 100%;
 }
-main .actual__more {
+.actual__more {
   display: inline-block;
   max-width: 1248px;
   text-align: center;
   text-decoration: underline;
 }
-main .contact {
+
+.contact {
   max-width: 1568px;
 }
-main .contact__title-bg {
+.contact__title-bg {
   font-size: 180px;
   line-height: 180px;
 }
-main .contact__title {
+.contact__title {
   font-size: 100px;
 }
-main .contact-content-wrapper {
+.contact-content-wrapper {
   padding: 20px 0px;
   display: flex;
 }
-main .contact__map img {
+.contact__map img {
   max-width: 1000px;
   height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .contact__links {
+.contact__links {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,6 +537,25 @@ main .contact__links {
   text-transform: uppercase;
   color: #FFFFFF;
   flex-grow: 1;
+}
+
+.about-us {
+  font-family: "Uindbase Font 1";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.about-us__title {
+  text-align: center;
+  font-size: 70px;
+  line-height: 100px;
+}
+.about-us__text {
+  max-width: 1450px;
+  padding: 15px 15px 15px 15px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .footer {
