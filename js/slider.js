@@ -16,6 +16,7 @@ new Swiper('.ts-slider', {
 new Swiper('.actual-slider', {
   breakpoints: {
     0: {
+      spaceBetween: 15,
       slidesPerView: "auto",
     },
     800: {

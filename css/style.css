@@ -250,11 +250,20 @@ input, button, textarea, select {
 }
 .product-card__colors {
   display: flex;
-  gap: 5px;
+  gap: 3px;
 }
 .product-card__color {
   cursor: pointer;
+  padding: 2px 2px;
   margin: 40px 0px;
+}
+.product-card__color:hover {
+  border: 1px solid #D1C12B;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .header {
@@ -712,6 +721,9 @@ input, button, textarea, select {
     width: 450px;
     height: 650px;
   }
+  .product-card__description {
+    width: 80%;
+  }
   .header {
     max-width: 1254px;
   }
@@ -789,6 +801,12 @@ input, button, textarea, select {
   }
 }
 @media (max-width: 1024px) {
+  .title {
+    padding: 0px 15px;
+  }
+  .title-bg {
+    padding: 0px 15px;
+  }
   .product-card {
     gap: 40px;
     width: 100%;
@@ -962,13 +980,11 @@ input, button, textarea, select {
     margin-top: 40px;
   }
   .about-us__title-bg {
-    padding-left: 15px;
     text-align: left;
     font-size: 80px;
     line-height: 70px;
   }
   .about-us__title {
-    padding-left: 15px;
     font-size: 60px;
     line-height: 60px;
     left: 0;
