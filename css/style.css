@@ -141,12 +141,12 @@ input, button, textarea, select {
   justify-content: center;
   align-items: center;
   height: auto;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .burger-menu {
@@ -205,7 +205,7 @@ input, button, textarea, select {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  overflow: auto;
+  overflow-y: auto;
 }
 .product-card__close {
   cursor: pointer;
@@ -808,22 +808,34 @@ input, button, textarea, select {
     padding: 0px 15px;
   }
   .product-card {
+    flex-direction: column-reverse;
     gap: 40px;
     width: 100%;
+    max-height: 3800px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     -o-border-radius: 0;
   }
+  .product-card__info {
+    padding-top: 50px;
+    align-items: center;
+  }
+  .product-card__image {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
   .product-card__image img {
-    width: 300px;
-    max-height: 100vh;
+    max-width: 80%;
+    max-height: 400px;
   }
   .product-card__price {
     font-size: 30px;
   }
   .product-card__description {
+    text-align: center;
     font-size: 15px;
     padding: 20px 0px;
   }
@@ -1024,9 +1036,6 @@ input, button, textarea, select {
     gap: 40px;
     width: 100%;
     min-height: 100vh;
-  }
-  .product-card__image {
-    display: none;
   }
   .product-card__price {
     font-size: 30px;
