@@ -65,9 +65,10 @@ $(".put-in-cart, .more").click(function() {
 </div>`
 
     $(".dark-bg-product-card").css("display", "flex").fadeIn("slow").append(productCardHTML);
-    
+    $("body").addClass("lock");
     $(".product-card__close").click(function() {
         $(".dark-bg-product-card").fadeOut("slow");
         $(".product-card").remove();
+        $("body").removeClass("lock");
     })
 });
