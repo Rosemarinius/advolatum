@@ -37,7 +37,6 @@ $white: #FFFFFF;
 .centered {
     margin: 0 auto;
 }
-
 .hover-yellow:hover {
     color: $yellow;
 }
@@ -70,6 +69,9 @@ $white: #FFFFFF;
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+.put-in-cart {
+    cursor: pointer;
+}
 
 .title-bg {
     position: absolute;
@@ -101,6 +103,19 @@ $white: #FFFFFF;
     position: relative;
 }
 
+.dark-bg-product-card {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 99;
+    overflow: auto;
+}
 // MODALS
 .burger-menu {
     min-height: 100vh;
@@ -143,6 +158,77 @@ $white: #FFFFFF;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.product-card {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    font-family: 'Uindbase Font 1';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #0C1218;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    overflow: auto;
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        padding: 15px 15px 0px 0px;
+    }
+    &__image img{
+        width: 500px;
+        height: 720px;
+        max-height: 95vh;
+
+        object-fit: cover;
+    }
+
+    &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    &__price {
+        font-size: 40px;
+    }
+    &__description {
+        font-size: 20px;
+        max-width: 400px;
+        padding: 25px 0px;
+    }
+
+    &__sizes {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        max-width: 302px;
+        font-size: 20px;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
+    &__size {
+        cursor: pointer;
+    }
+    &__colors {
+        display: flex;
+        gap: 5px;
+    }
+    &__color {
+        cursor: pointer;
+        margin: 40px 0px;
     }
 }
 
@@ -373,7 +459,7 @@ $white: #FFFFFF;
                 -o-border-radius: 1px ;
             }
         }
-    }
+}
     
 .actual {
     max-width: $limit-size1920;
@@ -480,7 +566,8 @@ $white: #FFFFFF;
                 align-items: center;
                 justify-content: center;
                 height: 90px;
-                    
+            }
+            &__more {
                 text-decoration: underline;
             }
                 
@@ -649,6 +736,13 @@ $white: #FFFFFF;
 }
 
 @media (max-width: 1600px) {
+    .product-card {
+        &__image img{
+            width: 450px;
+            height: 650px;
+        }
+    }
+
     .header {
         max-width: $limit-size1600;
 
@@ -736,6 +830,34 @@ $white: #FFFFFF;
 }
 
 @media (max-width: 1024px) {
+    .product-card {
+        gap: 40px;
+        width: 100%;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        &__image img{
+            width: 300px;
+            max-height: 100vh;
+        }
+        &__price {
+            font-size: 30px;
+        }
+        &__description {
+            font-size: 15px;
+            padding: 20px 0px;
+        }
+        &__sizes {
+            max-width: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+
     .header {
         max-width: 100%;
         .header-nav {
@@ -946,6 +1068,37 @@ $white: #FFFFFF;
 }
 
 @media (max-width: 768px) {
+    .product-card {
+        gap: 40px;
+        width: 100%;
+        min-height: 100vh;
+        
+
+        // &__info {
+        //     background: linear-gradient( rgba(255, 255, 255, 0.8),rgba(0, 0, 0, 0.5) ), url('../img/actual-photo3.jpg');
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     padding-left: 15px;
+        // }
+        &__image {
+            display: none;
+        }
+        &__price {
+            font-size: 30px;
+        }
+        &__description {
+            font-size: 15px;
+            padding: 20px 0px;
+        }
+        &__sizes {
+            max-width: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+    
     .header {
         max-width: 100%;
         display: flex;
